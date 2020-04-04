@@ -47,8 +47,8 @@ params={"where":"1=1","outFields":"*","outSR":"4326","f":"json"}
 r=requests.get(url,params=params) 
 data=r.json()
 for a in data["features"]:    
-    address=a["attributes"]["CV_BLOCK_ADD"]    
-    crimetype=a["attributes"]["CVINC_TYPE"]    
+    address=a["attributes"]["BlockAddress"]    
+    crimetype=a["attributes"]["IncidentType"]    
     if a['attributes']['date'] is None:        
         pass    
         else:        
